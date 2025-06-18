@@ -1,0 +1,26 @@
+nav {
+    height: 70px;
+    background-color: rgb(43, 42, 42);
+    display: flex;
+}
+
+nav img {
+    padding: 10px;
+}
+
+.nav-category {
+    background-color:rgb(77, 76, 76);
+    height: 25%;
+    width: 70px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 30px;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    font-family: "Special Gothic", sans-serif;
+}
+
+.nav-category:hover {
+    background-color:rgb(58, 57, 57);
+}
