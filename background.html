@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Background - matisio.eu</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background: #1a1a1a;
+    }
+    canvas {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+<canvas id="dotCanvas"></canvas>
+
+<script>
+window.onload = function () {
+  const canvas = document.getElementById('dotCanvas');
+  const ctx = canvas.getContext('2d');
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  const dots = [];
+  const dotCount = 100;
+
+  for (let i = 0; i < dotCount; i++) {
+    dots.push({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      vx: (Math.random() - 0.5) * 0.5,
+      vy: (Math.random() - 0.5) * 0.5
+    });
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    for (let i = 0; i < dots.length; i++) {
+      ctx.beginPath();
+      ctx.arc(dots[i].x, dots[i].y, 2, 0, Math.PI * 2);
+      ctx.fillStyle = '#ffffff';
+      ctx.fill();
+    }
+
+    for (let i = 0; i < dots.length; i++) {
+      for (let j = i + 1; j < dots.length; j++) {
+        const dx = dots[i].x - dots[j].x;
+        const dy = dots[i].y - dots[j].y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < 100) {
+          ctx.beginPath();
+          ctx.moveTo(dots[i].x, dots[i].y);
+          ctx.lineTo(dots[j].x, dots[j].y);
+          ctx.strokeStyle = `rgba(255, 255, 255, ${1 - dist / 100})`;
+          ctx.stroke();
+        }
+      }
+    }
+
+    for (let i = 0; i < dots.length; i++) {
+      dots[i].x += dots[i].vx;
+      dots[i].y += dots[i].vy;
+
+      if (dots[i].x < 0 || dots[i].x > canvas.width) dots[i].vx *= -1;
+      if (dots[i].y < 0 || dots[i].y > canvas.height) dots[i].vy *= -1;
+    }
+
+    requestAnimationFrame(draw);
+  }
+
+  draw();
+};
+</script>
+
+</body>
+</html>

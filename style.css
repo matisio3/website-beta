@@ -1,26 +1,85 @@
-nav {
-    height: 70px;
-    background-color: rgb(43, 42, 42);
-    display: flex;
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Open Sans", sans-serif;
 }
 
-nav img {
-    padding: 10px;
+.nav a {
+	position: relative;
+	top: -12px;
+	text-decoration: none;
+	color: white;
+	font-size: 30px;
+	padding: 20px;
 }
 
-.nav-category {
-    background-color:rgb(77, 76, 76);
-    height: 25%;
-    width: 70px;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-right: 30px;
-    padding: 10px;
-    text-decoration: none;
-    color: white;
-    font-family: "Special Gothic", sans-serif;
+.nav a:hover {
+	color: #d1cdcd;
 }
 
-.nav-category:hover {
-    background-color:rgb(58, 57, 57);
+.nav img {
+	padding-left: 20px;
+	padding-top: 10px;
+}
+
+.nav {
+	background: #18CCE7;
+	background: linear-gradient(90deg, rgba(24, 204, 231, 1) 0%, rgba(18, 149, 169, 1) 100%);
+}
+
+canvas {
+	display: block;
+}
+
+iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      border: none;
+      z-index: -1;
+      pointer-events: none;
+}
+	
+.banner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh; /* 100% wysokości okna */
+      width: 100%;
+      text-align: center;
+      flex-direction: column; /* ustawia elementy jeden pod drugim */
+	  margin-top: -400px;
+	  float: left;
+	  color: white;
+    }
+	
+.button {
+	background-color: purple;
+	border-color: purple;
+	width: 100px;
+	height: 50px;
+	color: white;
+	font-weight: bolder;
+	border-radius: 50px;
+	margin: 20px;
+}
+
+.button-portfolio {
+	background-color: #bb5df0;
+	border-color: #bb5df0;
+}
+
+.button-projekty {
+	background-color: #f0d85d;
+	border-color: #f0d85d;
+}
+
+.button-portfolio:hover {
+	background-color: #8a47b0;
+	border-color: #8a47b0;
+}
+
+.button-projekty:hover {
+	background-color: #c4b04b;
+	border-color: #c4b04b;
 }

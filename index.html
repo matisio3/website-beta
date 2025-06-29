@@ -1,33 +1,33 @@
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Strona Główna | matisio.eu</title>
-        <link rel="icon" type="image/x-icon" href="favicon.ico">
-        <link rel="shortcut icon" type="image/jpg" href="/favicon.ico"/>
-        <link rel="stylesheet" href="style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Francois+One&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Special+Gothic&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    </head>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
+<htnml lang="PL">
+	<head>
+		<meta charset="UTF-8">
+		<title>matisio.eu</title>
+		<link rel="stylesheet" href="style.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Varela+Round&display=swap" rel="stylesheet">
+		<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+	</head>
+	<body>
+        <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+        <script>
         AOS.init();
-    </script>
-    <body>
-        <nav>
-            <a href="/"><img src="favicon.ico" width="50"></a><a style="color:white;margin-top:auto;margin-bottom:auto;font-family:'Francois One', sans-serif;font-size:140%;text-decoration:none;" href="/">matisio.eu</a>
-            <hr style="margin-left:20px;height:50%;margin-top:auto;margin-bottom:auto;color:rgb(59, 59, 59)">
-            <a href="osobie"><div class="nav-category" data-aos="fade-left">
-                <a style="text-decoration:none;color:white;margin-left:8px;">O sobie</a>
-            </div></a>
-            <a href="discord"><div class="nav-category">
-                <a style="text-decoration:none;color:white;margin-left:8px;">Discord</a>
-            </div></a>
-            <a href="projekty"><div class="nav-category">
-                <a style="text-decoration:none;color:white;margin-left:8px;" href="projekty">Projekty</a>
-            </div></a>
-        </nav>
-    </body>
+        </script>
+		<div class="nav">
+			<img src="img/favicon.png" width="50">
+			<a href="#portfolio">Portfolio</a>
+			<a href="#projekty">Projekty</a>
+		</div>
+		<div class="banner">
+			<iframe src="background.html" title="banner" width="100%" height="500"></iframe>
+			<div class=banner-content">
+				<img src="img/favicon.png" width="100" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
+				<h1 data-aos="fade-down" data-aos-duration="1000" data-aos-delay="200">Hi, I'm Matisio!</h1>
+				<a href="#portfolio"><button class="button button-portfolio" data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="200">Portfolio</button></a>
+				<a href="#projekty"><button class="button button-projekty" data-aos="zoom-out" data-aos-duration="1000" data-aos-delay="200">Projekty</button></a>
+			</div>
+		</div>
+	</body>
 </html>
